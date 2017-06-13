@@ -6,7 +6,7 @@ module GoToTraining
     end
     
     def get_organizers_by_training(training_key)
-      self.class.get("trainings/#{training_key}/organizers").parsed_response
+      self.class.get("/trainings/#{training_key}/organizers").parsed_response
     end
     
   end
