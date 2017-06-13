@@ -4,7 +4,7 @@ This is a project to build a Ruby wrapper for using Citrix's GoToTraining REST A
 
 ##Requirements
 
-You must have an active GoToTraining account and a valid access token from the GoToTraining OAuth flow. Please refer to the [authentication and authorization documentation](https://developer.citrixonline.com/page/authentication-and-authorization). The OAuth flow will return both the access token and organizer key. Both access token and organizer key are required to use the training API. 
+You must have an active GoToTraining account and a valid access token from the GoToTraining OAuth flow. Please refer to the [authentication and authorization documentation](https://goto-developer.logmein.com/how-get-access-token-and-organizer-key). The OAuth flow will return the necessary keys.  
 
 ##Install
 
@@ -18,7 +18,7 @@ For now you will need to install from source.
 
 ##Usage
 
-Please refer to the [developer documentation](https://developer.citrixonline.com/api-overview/gototraining-rest-api) for a complete list of available methods. 
+Please refer to the [developer documentation](https://goto-developer.logmein.com/content/gototraining-api-reference) for a complete list of available methods. 
 
 	@g2t = GoToTraining::Client.new(oauth_access_token, account_key, organizer_key) 
 	@g2t.get_trainings
