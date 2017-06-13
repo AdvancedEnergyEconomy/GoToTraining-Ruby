@@ -8,6 +8,8 @@ require "go_to_training/organizers"
 
 module GoToTraining
   class Client
+
+    GOTO_TRAINING_BASE_URL = 'https://api.getgo.com/G2T/rest'
     
     include HTTParty
     format :json
@@ -28,7 +30,7 @@ module GoToTraining
       @account_key = account_key
       
       @default_params = {
-        :base_uri => "https://api.getgo.com/G2T/rest/organizers/#{@organizer_key}/",
+        :base_uri => "#{GOTO_TRAINING_BASE_URL}/organizers/#{@organizer_key}/",
         :headers => {
           "Content-type" => "application/json",
           "Accept" => "application/json",

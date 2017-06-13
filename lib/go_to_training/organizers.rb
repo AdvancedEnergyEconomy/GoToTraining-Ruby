@@ -2,7 +2,7 @@ module GoToTraining
   module Organizers
     
     def get_organizers
-      self.class.get("https://api.citrixonline.com/G2T/rest/accounts/#{@account_key}/organizers").parsed_response
+      self.class.get("#{GOTO_TRAINING_BASE_URL}/accounts/#{@account_key}/users").parsed_response
     end
     
     def get_organizers_by_training(training_key)

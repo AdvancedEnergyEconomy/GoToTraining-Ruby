@@ -26,7 +26,7 @@ class TrainingsTest < Test::Unit::TestCase
 
     should "valid get trainings" do
       FakeWeb.register_uri(:get,
-         "https://api.citrixonline.com/G2T/rest/organizers/54321/trainings",
+         "https://api.getgo.com/G2T/rest/organizers/54321/trainings",
          :body => '[{"trainingKey":"12345"}]',
          :content_type => "application/json",
          :status => ["200", "OK"])
