@@ -6,11 +6,11 @@ module GoToTraining
     end
     
     def delete_training(training_key)
-      self.class.delete("/trainings/{training_key}")
+      self.class.delete("/trainings/#{training_key}")
     end
     
     def get_manage_training_url(training_key)
-      self.class.get("/trainings/{training_key}/manageUrl").parsed_response
+      self.class.get("/trainings/#{training_key}/manageUrl").parsed_response
     end
     
     def get_training(training_key)
