@@ -13,6 +13,10 @@ module GoToTraining
       self.class.get("/trainings/#{training_key}/manageUrl").parsed_response
     end
     
+    def get_start_training_url(training_key)
+      self.class.get("/trainings/#{training_key}/startUrl").parsed_response
+    end  
+    
     def get_training(training_key)
       self.class.get("/trainings/#{training_key}").parsed_response
     end
