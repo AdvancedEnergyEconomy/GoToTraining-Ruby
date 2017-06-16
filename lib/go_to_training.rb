@@ -30,7 +30,7 @@ module GoToTraining
       @account_key = account_key
       
       @default_params = {
-        :base_uri => "#{GOTO_TRAINING_BASE_URL}/organizers/#{@organizer_key}/",
+        :base_uri => "#{GOTO_TRAINING_BASE_URL}/organizers/#{@organizer_key}",
         :headers => {
           "Content-type" => "application/json",
           "Accept" => "application/json",
