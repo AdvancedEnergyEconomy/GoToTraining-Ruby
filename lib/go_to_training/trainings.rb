@@ -13,8 +13,12 @@ module GoToTraining
       self.class.get("/trainings/#{training_key}/manageUrl").parsed_response
     end
     
-    def get_start_training_url(training_key)
+    def get_organizer_start_training_url(training_key)
       self.class.get("/trainings/#{training_key}/startUrl").parsed_response
+    end 
+    
+    def get_participant_start_training_url(training_key)
+      "#{self.class.base_uri}/trainings/#{training_key}/start".to_json
     end  
     
     def get_training(training_key)
