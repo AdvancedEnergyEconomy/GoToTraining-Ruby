@@ -18,7 +18,7 @@ module GoToTraining
     end 
     
     def get_participant_start_training_url(training_key)
-      "#{self.class.base_uri}/trainings/#{training_key}/start".to_json
+      "#{self.class.base_uri}/trainings/#{training_key}/start"
     end  
     
     def get_training(training_key)
