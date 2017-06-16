@@ -25,6 +25,10 @@ module GoToTraining
       self.class.get("/trainings").parsed_response
     end
     
+    def start_training
+       self.class.get("/trainings/#{training_key}/start").parsed_response  
+    end
+    
     def update_training_name_and_description(training_key, params)
       self.class.put("/trainings/#{training_key}/nameDescription", :body => params).parsed_response
     end
