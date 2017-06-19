@@ -5,6 +5,7 @@ require "go_to_training/version"
 require "go_to_training/trainings"
 require "go_to_training/registrants"
 require "go_to_training/organizers"
+require "go_to_training/sessions"
 
 module GoToTraining
   class Client
@@ -17,6 +18,7 @@ module GoToTraining
     include GoToTraining::Trainings
     include GoToTraining::Registrants
     include GoToTraining::Organizers
+    include GoToTraining::Sessions
     
     attr_accessor :access_token
     attr_accessor :organizer_key
