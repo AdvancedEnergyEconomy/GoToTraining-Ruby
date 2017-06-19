@@ -5,7 +5,7 @@ module GoToTraining
       self.class.delete("/trainings/#{training_key}/registrants/#{registrant_key}").parsed_response
     end
     
-    def get_registrant(registrant_key)
+    def get_registrant(training_key, registrant_key)
       self.class.get("/trainings/#{training_key}/registrants/#{registrant_key}").parsed_response
     end
     
@@ -19,8 +19,7 @@ module GoToTraining
     
     def get_attendance_details(session_key)
       self.class.get("/sessions/#{session_key}/attendees").parsed_response
-    end
-    
+    end  
     
   end
 end
