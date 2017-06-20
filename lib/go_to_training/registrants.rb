@@ -2,7 +2,7 @@ module GoToTraining
   module Registrants
     
     def cancel_registration(training_key, registrant_key)
-      self.class.delete("/trainings/#{training_key}/registrants/#{registrant_key}").parsed_response
+      self.class.delete("/trainings/#{training_key}/registrants/#{registrant_key}")
     end
     
     def get_registrant(training_key, registrant_key)
