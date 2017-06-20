@@ -38,7 +38,7 @@ module GoToTraining
     end
     
     def update_training_registration_settings(training_key, params)
-      self.class.put("/trainings/#{training_key}/registrationSettings", :body => params).parsed_response
+      self.class.put("/trainings/#{training_key}/registrationSettings", :body => params)
     end
     
     def update_training_times(training_key, params)
