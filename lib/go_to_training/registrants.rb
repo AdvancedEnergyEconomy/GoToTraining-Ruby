@@ -18,7 +18,7 @@ module GoToTraining
     end
     
     def get_attendance_details(session_key)
-      self.class.get("/sessions/#{session_key}/attendees").parsed_response
+      self.class.get("#{GoToTraining::Client::GOTO_TRAINING_BASE_URL}/reports/organizers/#{organizer_key}/sessions/#{session_key}/attendees").parsed_response
     end  
     
   end
